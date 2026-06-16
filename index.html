@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- 드래프트 미리보기: 검색엔진 비노출 -->
+<meta name="robots" content="noindex, nofollow" />
+<title>합격으로 직진, 공무원 구독패스 | 스콘 SCONN</title>
+<meta name="description" content="내가 선택한 선생님의 모든 교재를 태블릿 하나로. 일주일 무료체험, 얼리버드 첫 달 9,900원. 심우철 영어, 권규호 국어 공무원 구독패스." />
+
+<!-- OG (카카오톡 공유 대응) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="[NEW] 2027 공무원 구독패스 | 얼리버드 첫 달 9,900원" />
+<meta property="og:description" content="내가 선택한 선생님의 모든 교재를 태블릿 하나로. 흐름 끊김 없이 합격으로 직진하세요. 일주일 무료체험 + 얼리버드 첫 달 9,900원." />
+<meta property="og:image" content="https://sconn.io/images/og_gong_subs_2027.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://sconn.io/gong_subs/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Pretendard -->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<!-- Tailwind (배포 시 정적 빌드 권장: bg-white/[0.06], border-white/15, bg-sky 등 토글 클래스 safelist 필요) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Pretendard', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        colors: {
+          sky: { DEFAULT: '#43BCF8', text: '#12A6F7', soft: '#E8F2FB', faint: '#F2F7FB' },
+          deep: { DEFAULT: '#2C68B3', strong: '#254999' },
+          ink: { DEFAULT: '#191919', soft: '#393939', mute: '#737373' },
+          event: '#FFF200',
+          herodark: '#0D1315',
+        },
+        boxShadow: { card: '0 10px 30px rgba(0,0,0,0.08)', soft: '0 4px 16px rgba(0,0,0,0.06)' },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  :target { scroll-margin-top: 4.5rem; }
+  body { -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: anywhere; }
+
+  /* 밝은 배경 위 링크 (대비 AA 확보) */
+  .lnk { color:#254999; font-weight:600; text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(37,73,153,.35); transition:text-decoration-color .2s; }
+  .lnk:hover { text-decoration-color:#254999; }
+
+  /* 교재 표지 (실제 이미지) */
+  .bookcover { width:100%; height:auto; display:block; border-radius:8px; background:#eef1f4; box-shadow:0 6px 16px rgba(0,0,0,.14), inset 0 0 0 1px rgba(0,0,0,.06); transition:box-shadow .25s ease, transform .25s ease; }
+  .bookcover:hover { transform:translateY(-4px); box-shadow:0 14px 28px rgba(0,0,0,.20), inset 0 0 0 1px rgba(0,0,0,.08); }
+
+  /* device mockup */
+  .device { border-radius:26px; background:#0b1114; padding:9px; box-shadow:0 24px 50px rgba(0,0,0,.30), inset 0 0 0 1px rgba(255,255,255,.06); }
+  .device-screen { border-radius:18px; overflow:hidden; background:#0f1518; }
+
+  /* FAQ */
+  details > summary { list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+  details[open] .faq-chevron { transform:rotate(180deg); }
+  .faq-chevron { transition:transform .25s ease; }
+
+  /* reveal on scroll */
+  .reveal { opacity:0; transform:translateY(30px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity:1; transform:none; }
+
+  /* donut draw-in */
+  @keyframes donutIn { from { transform:rotate(-110deg) scale(.82); opacity:0; } to { transform:rotate(0) scale(1); opacity:1; } }
+  .donut.in { animation:donutIn .9s cubic-bezier(.2,.8,.2,1) both; }
+
+  /* floating blobs */
+  @keyframes floatY { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-16px) } }
+  .blob { position:absolute; border-radius:9999px; filter:blur(46px); opacity:.55; pointer-events:none; animation:floatY 7s ease-in-out infinite; }
+
+  /* 제품 쇼케이스 플로팅 (목업) */
+  @keyframes floatA { 0%,100%{ transform:translateY(0) rotate(0deg) } 50%{ transform:translateY(-14px) rotate(-0.6deg) } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0) rotate(0.4deg) } 50%{ transform:translateY(12px) rotate(1.4deg) } }
+  .floatA { animation:floatA 6.5s ease-in-out infinite; will-change:transform; }
+  .floatB { animation:floatB 5.2s ease-in-out infinite; will-change:transform; }
+  [data-parallax]{ will-change:transform; }
+
+  /* marquee */
+  .mq-wrap { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent); mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent); }
+  .mq { display:flex; gap:14px; width:max-content; animation:mqL 46s linear infinite; }
+  .mq.rev { animation-name:mqR; animation-duration:54s; }
+  @keyframes mqL { from{ transform:translateX(0) } to{ transform:translateX(-50%) } }
+  @keyframes mqR { from{ transform:translateX(-50%) } to{ transform:translateX(0) } }
+  .mq-wrap:hover .mq { animation-play-state:paused; }
+
+  /* pulse on primary CTA */
+  @keyframes softpulse { 0%,100%{ box-shadow:0 0 0 0 rgba(255,242,0,.0) } 50%{ box-shadow:0 0 0 8px rgba(255,242,0,.16) } }
+  .cta-pulse { animation:softpulse 2.4s ease-in-out infinite; }
+
+  .hover-lift { transition:transform .25s ease, box-shadow .25s ease; }
+  .hover-lift:hover { transform:translateY(-5px); box-shadow:0 16px 36px rgba(0,0,0,.12); }
+
+  /* 키보드 포커스 링 (focus-visible 전역) */
+  a:focus-visible, button:focus-visible, summary:focus-visible, label:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline:2px solid #12A6F7; outline-offset:2px; border-radius:6px; }
+  /* 모바일 하단 고정 CTA가 본문/푸터를 가리지 않게 여백 확보 */
+  @media (max-width:767px){ body{ padding-bottom:76px; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity:1; transform:none; transition:none; }
+    .mq, .blob, .donut.in, .cta-pulse, .floatA, .floatB { animation:none !important; }
+    [data-parallax]{ transform:none !important; }
+    /* 마퀴 정지 시 후기가 잘리지 않게 가로 스크롤 허용 + 중복 카드 숨김 */
+    .mq-wrap { overflow-x:auto; -webkit-mask-image:none; mask-image:none; }
+    .mq { gap:14px; }
+    .mq [aria-hidden="true"] { display:none; }
+    html { scroll-behavior:auto; }
+  }
+  /* 강사 카드 — 사진 컬럼 (모바일=상단 와이드, md+=좌측 세로 컬럼) */
+  #teachers .tphoto { height: 260px; }
+  @media (min-width: 768px) {
+    #teachers .tcard { min-height: 400px; }
+    #teachers .tphoto { height: auto; width: 210px; align-self: stretch; }
+  }
+</style>
+</head>
+<body class="bg-white text-ink font-sans overflow-x-hidden">
+
+<!-- ============ 상단 고정 바 (클릭 가능 → #select) ============ -->
+<a href="#select" id="floatBar" class="fixed top-0 inset-x-0 z-50 block bg-ink text-white hover:bg-black transition">
+  <div class="mx-auto max-w-[1080px] px-4 md:px-8 py-2.5 flex items-center justify-between gap-2">
+    <div class="flex items-center gap-1.5 text-[12px] md:text-[14px] leading-tight min-w-0">
+      <span class="bg-event text-ink font-extrabold text-[10px] md:text-[11px] px-1.5 py-0.5 rounded shrink-0">EVENT</span>
+      <span class="font-semibold truncate">얼리버드 첫 달 <span class="text-event font-extrabold">9,900원</span></span>
+    </div>
+    <div class="flex items-center gap-2 shrink-0">
+      <span class="text-[12px] md:text-[13px] font-mono tabular-nums whitespace-nowrap"><span class="text-white/55 mr-1">종료까지</span><span id="fb-d">00</span>일 <span id="fb-h">00</span>:<span id="fb-m">00</span>:<span id="fb-s">00</span></span>
+      <span class="hidden md:inline bg-event text-ink text-[13px] font-extrabold px-3 py-1 rounded-full">시작하기 →</span>
+    </div>
+  </div>
+</a>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="relative overflow-hidden pt-16 md:pt-20">
+    <div class="blob" style="width:320px;height:320px;left:-80px;top:40px;background:#43BCF8;"></div>
+    <div class="blob" style="width:280px;height:280px;right:-70px;top:120px;background:#FFF200;opacity:.30;animation-delay:1.5s;"></div>
+
+    <div class="relative mx-auto max-w-[900px] px-6 pt-8 md:pt-14 text-center">
+      <span class="inline-block bg-ink text-white text-[13px] md:text-[15px] font-bold px-4 py-1.5 rounded-full tracking-tight reveal">[NEW] 2027 공무원 시험 대비</span>
+      <h1 class="mt-5 text-[40px] md:text-[68px] leading-[1.1] font-extrabold tracking-[-0.02em] reveal">
+        합격으로 직진<br/>공무원 구독패스
+      </h1>
+      <p class="mt-5 text-[15px] md:text-[19px] leading-relaxed text-ink-soft reveal">
+        내가 고른 선생님의 <b class="text-ink font-bold">전 교재</b>를 태블릿 하나에 담아 무제한으로 봐요.<br class="hidden md:block"/> 흐름 끊김 없이, 합격까지 함께하는 <b class="text-ink font-bold">월 구독</b>이에요.
+      </p>
+      <!-- 한 눈에 보는 구독패스 정체성 -->
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1.5 reveal">
+        <span class="bg-sky-soft text-deep-strong text-[12px] md:text-[13px] font-semibold rounded-full px-3 py-1">원하는 선생님 선택</span>
+        <span class="text-sky-text font-bold" aria-hidden="true">→</span>
+        <span class="bg-sky-soft text-deep-strong text-[12px] md:text-[13px] font-semibold rounded-full px-3 py-1">전 교재 무제한</span>
+        <span class="text-sky-text font-bold" aria-hidden="true">→</span>
+        <span class="bg-sky-soft text-deep-strong text-[12px] md:text-[13px] font-semibold rounded-full px-3 py-1">태블릿 하나로 공부</span>
+      </div>
+
+      <div class="mt-8 reveal">
+        <!-- 7/12는 '첫 달 할인' 조건 (무료체험은 상시) -->
+        <div class="inline-flex items-center gap-1.5 bg-sky-soft text-deep-strong rounded-full pl-1.5 pr-3 py-1 mb-3">
+          <span class="bg-event text-ink text-[10px] md:text-[11px] font-extrabold px-2 py-0.5 rounded">7/12까지</span>
+          <span class="text-[13px] md:text-[14px] font-bold">시작하면 첫 달 9,900원<span class="text-deep-strong/60 font-semibold"> (이후 19,900원)</span></span>
+        </div>
+        <div>
+          <a href="#select" class="block w-full md:inline-block md:w-auto md:px-14 bg-ink text-white text-[17px] md:text-[19px] font-bold rounded-2xl py-4 hover:bg-black active:scale-[0.99] transition">
+            일주일 무료로 시작하기 →
+          </a>
+        </div>
+        <p class="mt-3 text-[13px] md:text-[14px] text-ink-mute">무료체험은 언제나 일주일. 체험 중엔 언제든 해지할 수 있어요.</p>
+      </div>
+    </div>
+
+    <!-- 강사 다크 패널 -->
+    <div class="mt-10 md:mt-14 bg-herodark relative overflow-hidden">
+      <img src="images/sconn_symbol.png" alt="" aria-hidden="true" class="absolute right-4 top-6 w-16 md:w-24 opacity-10" />
+      <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white/55 to-transparent pointer-events-none"></div>
+      <div class="absolute left-1/2 top-1/3 -translate-x-1/2 w-[480px] h-[260px] bg-sky/15 blur-[80px] rounded-full pointer-events-none"></div>
+      <div class="relative mx-auto max-w-[680px] px-5 py-10 md:py-14">
+        <p class="text-center text-white/55 text-[12px] md:text-[14px] reveal">내가 믿고 따르는 선생님, 그대로</p>
+        <div class="mt-5 grid grid-cols-2 gap-4 md:gap-7">
+          <figure class="reveal">
+            <a href="https://sconn.io/product/1188054/" class="block rounded-2xl overflow-hidden shadow-card ring-1 ring-white/10 hover-lift">
+              <img src="images/optimized/shim_pass_thumb.webp" alt="심우철 공무원 구독패스 — 공무원 영어 1위, 모든 교재 무제한 열람" class="block w-full h-auto" loading="lazy" decoding="async" />
+            </a>
+            <figcaption class="mt-3 text-center text-white/55 text-[11px] md:text-[13px]">26~27 시즌, 전 교재 48권</figcaption>
+          </figure>
+          <figure class="reveal">
+            <a href="https://sconn.io/product/1188053/" class="block rounded-2xl overflow-hidden shadow-card ring-1 ring-white/10 hover-lift">
+              <img src="images/optimized/kwon_pass_thumb.webp" alt="권규호 공무원 구독패스 — 모든 교재 무제한 열람" class="block w-full h-auto" loading="lazy" decoding="async" />
+            </a>
+            <figcaption class="mt-3 text-center text-white/55 text-[11px] md:text-[13px]">24~27 시즌, 전 교재 38권</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 얼리버드 미니 오퍼 배너 (가격 + CTA) ================= -->
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-[1080px] px-6 py-12 md:py-16 text-center">
+      <span class="inline-block bg-event text-ink text-[13px] font-extrabold px-3 py-1 rounded reveal">EVENT</span>
+      <h2 class="mt-4 text-[24px] md:text-[34px] leading-snug font-extrabold reveal">
+        더 빨리 합격을 향해!<br/>7월 12일까지 시작하면, <span class="text-event">첫 달 할인</span>
+      </h2>
+      <p class="mt-5 text-[16px] md:text-[18px] reveal">첫 달 구독료 <span class="line-through text-white/55">19,900원</span> <span class="text-event text-[30px] md:text-[40px] font-extrabold align-middle">9,900원</span></p>
+      <div class="mt-6 reveal">
+        <a href="#select" class="inline-block w-full md:w-auto md:px-12 bg-event text-ink text-[16px] md:text-[18px] font-extrabold rounded-2xl py-4 hover:brightness-95 active:scale-[0.99] transition cta-pulse">상품 보고 시작하기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY : 활용 / 몰입 ================= -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[1080px] px-6 py-16 md:py-24">
+      <h2 class="text-center text-[26px] md:text-[40px] leading-snug font-extrabold tracking-[-0.01em] reveal">
+        일 분 일 초가 아까울 때,<br/>언제 어디서든 자유롭게 <span class="text-sky-text">공부에 몰입해요</span>
+      </h2>
+
+      <!-- 제품 쇼케이스 (실사) -->
+      <div class="relative mt-12 md:mt-16 flex justify-center reveal">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[78%] max-w-[640px] h-[64%] bg-sky/20 blur-[70px] rounded-full pointer-events-none" aria-hidden="true"></div>
+        <figure class="relative w-full max-w-[600px]" data-parallax="0.05">
+          <img src="images/optimized/sconn_mockup.webp" alt="태블릿 하나로 스콘 앱을 열어 교재에 바로 필기하는 화면" class="floatA w-full h-auto drop-shadow-[0_36px_55px_rgba(20,40,80,0.30)]" loading="lazy" decoding="async" />
+          <figcaption class="mt-4 text-center text-[12px] md:text-[13px] text-ink-mute">스콘으로 교재에 바로 필기하는 화면</figcaption>
+        </figure>
+      </div>
+
+      <div class="mt-12 md:mt-16 grid gap-4 md:gap-6 md:grid-cols-3">
+        <article class="bg-sky-faint rounded-2xl p-6 md:p-7 hover-lift reveal">
+          <div class="w-12 h-12 rounded-xl bg-sky/15 text-sky-text grid place-items-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3 class="text-[16px] md:text-[18px] font-bold leading-snug">‘내 시간’, ‘내 공간’이 부족한<br/>직장과 육아를 병행하는 수험생</h3>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">교재도 자료도 노트도 태블릿 하나로.<br/>지하철 20분, 아이 재운 40분, 자투리 시간이 곧 공부 시간이 돼요.</p>
+        </article>
+        <article class="bg-sky-faint rounded-2xl p-6 md:p-7 hover-lift reveal">
+          <div class="w-12 h-12 rounded-xl bg-sky/15 text-sky-text grid place-items-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="text-[16px] md:text-[18px] font-bold leading-snug">집, 학원, 독서실, 카페를<br/>바쁘게 오가는 수험생</h3>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">수십 권을 태블릿 하나에.<br/>가방도 사물함도 가벼워지고, 책 놓고 온 날의 속상함도 없어요.</p>
+        </article>
+        <article class="bg-sky-faint rounded-2xl p-6 md:p-7 hover-lift reveal">
+          <div class="w-12 h-12 rounded-xl bg-sky/15 text-sky-text grid place-items-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          </div>
+          <h3 class="text-[16px] md:text-[18px] font-bold leading-snug">하나라도 놓칠까<br/>불안한 모든 수험생</h3>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">신간 검색도, 개정 확인도 이제 그만.<br/>새 교재가 알아서 책장에 들어와요.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= '정답'만 모셨어요 (강사) ================= -->
+  <section id="teachers" class="bg-ink text-white">
+    <div class="mx-auto max-w-[1080px] px-6 py-16 md:py-24">
+      <p class="text-center text-[14px] md:text-[16px] text-white/60 leading-snug reveal">시험 출제 경향을 가장 빠르게 반영하는</p>
+      <h2 class="mt-2 text-center text-[30px] md:text-[46px] font-extrabold tracking-[-0.01em] reveal">‘정답’만 모셨어요</h2>
+
+      <div class="mt-10 md:mt-14 grid gap-5 md:gap-7 md:grid-cols-2">
+        <!-- 심우철 -->
+        <article class="tcard bg-white/[0.06] rounded-3xl overflow-hidden hover-lift reveal flex flex-col md:flex-row">
+          <!-- 사진 컬럼 (모바일=상단 와이드, md+=좌측 세로) -->
+          <div class="tphoto relative shrink-0 overflow-hidden bg-gradient-to-b from-deep-strong/40 to-herodark">
+            <img src="images/optimized/shim_cut_upper.png" alt="심우철 영어 강사" loading="lazy" decoding="async"
+                 class="absolute inset-0 w-full h-full object-cover object-top"/>
+            <span class="absolute top-4 left-4 bg-sky text-ink text-[12px] font-extrabold px-2.5 py-1 rounded-full shadow-soft">영어</span>
+          </div>
+          <!-- 콘텐츠 컬럼 -->
+          <div class="flex-1 p-6 md:p-7 flex flex-col">
+            <h3 class="text-[20px] md:text-[24px] font-extrabold leading-snug">불안하던 영어가<br/>가장 든든한 과목으로</h3>
+            <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-white/75">신경향 독해를 꿰뚫는 심우철 선생님의 실전 스킬로, 합격까지 영어가 흔들리지 않아요.</p>
+            <!-- 스탯 -->
+            <dl class="mt-5 grid grid-cols-2 gap-2.5">
+              <div class="bg-white/[0.06] rounded-xl px-3.5 py-3">
+                <dt class="text-[11px] text-white/50">수록 시즌</dt>
+                <dd class="mt-0.5 text-[14px] md:text-[15px] font-extrabold">26~27 <span class="text-white/55 font-bold">(2개년)</span></dd>
+              </div>
+              <div class="bg-white/[0.06] rounded-xl px-3.5 py-3">
+                <dt class="text-[11px] text-white/50">전 교재</dt>
+                <dd class="mt-0.5 text-[14px] md:text-[15px] font-extrabold text-sky"><span data-count="48">0</span>권</dd>
+              </div>
+            </dl>
+            <!-- 후기 -->
+            <blockquote class="mt-5 pl-3.5 border-l-2 border-sky/60 text-[14px] md:text-[15px] leading-relaxed text-white/75">“가장 걱정되고 불안했던 영어가 어느 순간 가장 자신 있는 과목으로.”</blockquote>
+            <a href="https://sconn.io/product/1188054/" class="mt-auto pt-5 inline-flex items-center gap-1 text-sky-text text-[14px] md:text-[15px] font-semibold hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky">심우철 구독패스 자세히 보기 &gt;</a>
+          </div>
+        </article>
+        <!-- 권규호 -->
+        <article class="tcard bg-white/[0.06] rounded-3xl overflow-hidden hover-lift reveal flex flex-col md:flex-row">
+          <!-- 사진 컬럼 (모바일=상단 와이드, md+=좌측 세로) -->
+          <div class="tphoto relative shrink-0 overflow-hidden bg-gradient-to-b from-deep-strong/40 to-herodark">
+            <img src="images/optimized/kwon_cut_upper.png" alt="권규호 국어 강사" loading="lazy" decoding="async"
+                 class="absolute inset-0 w-full h-full object-cover object-top"/>
+            <span class="absolute top-4 left-4 bg-sky text-ink text-[12px] font-extrabold px-2.5 py-1 rounded-full shadow-soft">국어</span>
+          </div>
+          <!-- 콘텐츠 컬럼 -->
+          <div class="flex-1 p-6 md:p-7 flex flex-col">
+            <h3 class="text-[20px] md:text-[24px] font-extrabold leading-snug">딱 합격할 만큼,<br/>그러나 빈틈없이</h3>
+            <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-white/75">합격하는 사람의 국어는 다릅니다. 권규호 선생님과 가볍게, 그러나 끝까지 빈틈없이 채우세요.</p>
+            <!-- 스탯 -->
+            <dl class="mt-5 grid grid-cols-2 gap-2.5">
+              <div class="bg-white/[0.06] rounded-xl px-3.5 py-3">
+                <dt class="text-[11px] text-white/50">수록 시즌</dt>
+                <dd class="mt-0.5 text-[14px] md:text-[15px] font-extrabold">24~27 <span class="text-white/55 font-bold">(4개년)</span></dd>
+              </div>
+              <div class="bg-white/[0.06] rounded-xl px-3.5 py-3">
+                <dt class="text-[11px] text-white/50">전 교재</dt>
+                <dd class="mt-0.5 text-[14px] md:text-[15px] font-extrabold text-sky"><span data-count="38">0</span>권</dd>
+              </div>
+            </dl>
+            <p class="mt-3 inline-flex items-center gap-1.5 text-[12px] md:text-[13px] text-event font-semibold">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+              서프라이즈 교재 「긴급특강」 자동 제공
+            </p>
+            <!-- 후기 -->
+            <blockquote class="mt-4 pl-3.5 border-l-2 border-sky/60 text-[14px] md:text-[15px] leading-relaxed text-white/75">“국어에 대한 확신이 없어질 때, 권규호 선생님을 믿고 가십시오.”</blockquote>
+            <a href="https://sconn.io/product/1188053/" class="mt-auto pt-5 inline-flex items-center gap-1 text-sky-text text-[14px] md:text-[15px] font-semibold hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky">권규호 구독패스 자세히 보기 &gt;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 실제 후기 (자동 마퀴) ================= -->
+  <section class="bg-sky-faint py-16 md:py-24">
+    <div class="mx-auto max-w-[1080px] px-6 text-center">
+      <h2 class="text-[24px] md:text-[38px] font-extrabold leading-snug reveal">스콘 공무원 구독패스<br class="md:hidden"/> 실제 수험생 후기</h2>
+      <p class="mt-3 text-[13px] md:text-[15px] leading-relaxed text-ink-mute reveal">2026 대비 공무원 구독패스를 이용하신 수험생 여러분의 실제 후기입니다.<br/><span class="text-ink-mute/80">(출처: 스콘 공식 웹사이트 및 ‘심슨영어연구소’ 네이버 카페)</span></p>
+    </div>
+
+    <!-- row 1 (left) -->
+    <div class="mt-9 mq-wrap">
+      <div class="mq">
+        <!-- set A -->
+        <figure class="rev-card">“<span class="rev-t">진짜 좋아요. 제가 듣는 쌤들 다 패스 생기면 좋겠어요. 진짜 편해요 ㄷㄷㄷ</span><figcaption class="rev-by">— 영어 수강생 k***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">한달에 19,900원으로 원하는 책을 다 볼 수 있어서 좋네요 👍</span><figcaption class="rev-by">— 국어 수강생 j***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">태블릿만 있으면 어디서나 교재를 이용할 수 있고, 쌤 교재를 모두 볼 수 있어 경제적이고 효율적이에요. 전년도 교재도 덤으로 좋네요.</span><figcaption class="rev-by">— 영어 수강생 s***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">출퇴근길 대중교통에서도 가능해서 직장인 공시생은 완전 추천! 단권화도 충분히 되고 오답노트 제작도 가능합니다.</span><figcaption class="rev-by">— 직장인 수험생 m***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">아이패드로 바로 여러 책을 공부할 수 있는 게 가장 큰 장점이에요. 흐름 끊기지 않고 모르는 부분은 바로 체크할 수 있어요.</span><figcaption class="rev-by">— 영어 수강생 h***</figcaption></figure>
+        <!-- set A (dup for seamless loop) -->
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">진짜 좋아요. 제가 듣는 쌤들 다 패스 생기면 좋겠어요. 진짜 편해요 ㄷㄷㄷ</span><figcaption class="rev-by">— 영어 수강생 k***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">한달에 19,900원으로 원하는 책을 다 볼 수 있어서 좋네요 👍</span><figcaption class="rev-by">— 국어 수강생 j***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">태블릿만 있으면 어디서나 교재를 이용할 수 있고, 쌤 교재를 모두 볼 수 있어 경제적이고 효율적이에요. 전년도 교재도 덤으로 좋네요.</span><figcaption class="rev-by">— 영어 수강생 s***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">출퇴근길 대중교통에서도 가능해서 직장인 공시생은 완전 추천! 단권화도 충분히 되고 오답노트 제작도 가능합니다.</span><figcaption class="rev-by">— 직장인 수험생 m***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">아이패드로 바로 여러 책을 공부할 수 있는 게 가장 큰 장점이에요. 흐름 끊기지 않고 모르는 부분은 바로 체크할 수 있어요.</span><figcaption class="rev-by">— 영어 수강생 h***</figcaption></figure>
+      </div>
+    </div>
+    <!-- row 2 (right) -->
+    <div class="mt-3.5 mq-wrap">
+      <div class="mq rev">
+        <figure class="rev-card">“<span class="rev-t">채점하거나 해설지를 동시에 보면서 확인할 수 있고, 페이지 지우기 기능이 있어 새 책처럼 다시 사용할 수 있어 좋았어요.</span><figcaption class="rev-by">— 국어 수강생 y***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">구독패스로 책값 부담 없이 모든 교재를 자유로이 사용할 수 있어서 좋습니다.</span><figcaption class="rev-by">— 영어 수강생 c***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">이북이라 분할해서 강의 같이 듣기 너무 좋고요~ 무겁게 책 안 들고 다녀도 돼서 너무 좋아요!</span><figcaption class="rev-by">— 국어 수강생 p***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">필요한 교재를 골라 볼 수 있어서 좋습니다. 무거운 책을 다 들고 다니지 않아도 되니 더 좋아요!</span><figcaption class="rev-by">— 영어 수강생 w***</figcaption></figure>
+        <figure class="rev-card">“<span class="rev-t">기화펜 없이도 페이지 지우기로 새 책처럼 회독할 수 있어서 정말 만족합니다.</span><figcaption class="rev-by">— 국어 수강생 d***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">채점하거나 해설지를 동시에 보면서 확인할 수 있고, 페이지 지우기 기능이 있어 새 책처럼 다시 사용할 수 있어 좋았어요.</span><figcaption class="rev-by">— 국어 수강생 y***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">구독패스로 책값 부담 없이 모든 교재를 자유로이 사용할 수 있어서 좋습니다.</span><figcaption class="rev-by">— 영어 수강생 c***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">이북이라 분할해서 강의 같이 듣기 너무 좋고요~ 무겁게 책 안 들고 다녀도 돼서 너무 좋아요!</span><figcaption class="rev-by">— 국어 수강생 p***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">필요한 교재를 골라 볼 수 있어서 좋습니다. 무거운 책을 다 들고 다니지 않아도 되니 더 좋아요!</span><figcaption class="rev-by">— 영어 수강생 w***</figcaption></figure>
+        <figure class="rev-card" aria-hidden="true">“<span class="rev-t">기화펜 없이도 페이지 지우기로 새 책처럼 회독할 수 있어서 정말 만족합니다.</span><figcaption class="rev-by">— 국어 수강생 d***</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 투자 1 : 통계 ================= -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[1080px] px-6 py-16 md:py-24 text-center">
+      <p class="text-[14px] md:text-[16px] font-semibold text-ink-mute reveal">생각할수록 합리적이니까</p>
+      <h2 class="mt-2 text-[28px] md:text-[44px] leading-snug font-extrabold tracking-[-0.01em] reveal">‘지출’이 아닌<br/>미래를 위한 ‘투자’</h2>
+      <p class="mt-7 text-[15px] md:text-[18px] leading-relaxed text-ink-soft reveal">공무원 시험 응시자 <b>약 60%</b>는<br class="md:hidden"/> 연간 <b>40만 원 이상</b>의 교재비로 고민해요.</p>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+        <!-- donut (SVG · 통통한 링 + 호 중심 라벨, 절대 잘리지 않음) -->
+        <div class="donut shrink-0 reveal w-[200px] h-[200px] md:w-[240px] md:h-[240px]">
+          <svg viewBox="0 0 180 180" class="w-full h-full" role="img" aria-label="공무원 시험 응시자 교재비 설문: 연간 40만 원 이상 59.6%, 그중 60만 원 이상 22.6%">
+            <g transform="rotate(-90 90 90)">
+              <circle cx="90" cy="90" r="66" fill="none" stroke="#ECEFF3" stroke-width="34"/>
+              <!-- 40만 원 이상 59.6% (전체 부담층) -->
+              <circle cx="90" cy="90" r="66" fill="none" stroke="#43BCF8" stroke-width="34"
+                      stroke-dasharray="247.16 414.69" stroke-dashoffset="0"/>
+              <!-- 그중 60만 원 이상 22.6% — 59.6% 호 안쪽 선행 구간(포함관계) -->
+              <circle cx="90" cy="90" r="66" fill="none" stroke="#254999" stroke-width="34"
+                      stroke-dasharray="93.72 414.69" stroke-dashoffset="0"/>
+            </g>
+            <!-- 호 위 수치: 40만+ 전체 비중만 표기(60만+는 범례에서 '이 중'으로 안내) -->
+            <text x="126" y="148" text-anchor="middle" dominant-baseline="central"
+                  font-size="14" font-weight="800" fill="#fff" style="paint-order:stroke;stroke:rgba(0,0,0,.2);stroke-width:.5px;">59.6%</text>
+            <!-- 가운데 -->
+            <text x="90" y="80" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="600" fill="#737373">교재비 부담</text>
+            <text x="90" y="103" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="800" fill="#191919">약 60%</text>
+          </svg>
+        </div>
+        <!-- legend (포함관계 명시) -->
+        <ul class="text-left text-[15px] md:text-[18px] space-y-4">
+          <li class="reveal flex items-baseline gap-2.5">
+            <span class="inline-block w-3 h-3 rounded-sm bg-sky translate-y-[1px] shrink-0"></span>
+            <span><b class="text-sky-text" data-count="59.6" data-dec="1" data-suffix="%">0%</b> <span class="text-ink-mute">— 연간</span> <b>40만 원</b> 이상</span>
+          </li>
+          <li class="reveal flex items-baseline gap-2.5">
+            <span class="inline-block w-3 h-3 rounded-sm bg-deep-strong translate-y-[1px] shrink-0"></span>
+            <span class="text-ink-mute">이 중 <b class="text-deep" data-count="22.6" data-dec="1" data-suffix="%">0%</b>는 <b class="text-ink-soft">60만 원</b> 이상</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="mt-7 text-[12px] md:text-[13px] leading-relaxed text-ink-mute/80 reveal">* 2025년 8월 스콘 자체 조사 결과<br/>대상: 9급 공무원 시험 실제 응시자 554명</p>
+      <div class="mt-8 text-[15px] md:text-[18px] leading-snug font-bold reveal">교재비 걱정은 덜고, <span class="text-sky-text">미래를 위한 투자</span>로 바꾸세요.</div>
+    </div>
+  </section>
+
+  <!-- ================= 투자 2 : 사례1 심우철 ================= -->
+  <section class="bg-sky-faint">
+    <div class="mx-auto max-w-[1000px] px-6 py-16 md:py-24">
+      <div class="text-center reveal">
+        <span class="inline-block bg-deep text-white text-[12px] font-bold px-3 py-1 rounded-full">사례 1</span>
+        <h2 class="mt-3 text-[20px] md:text-[30px] leading-snug font-extrabold">교재 딱 한 권 값으로,<br/>심우철 전 교재 <span class="text-sky-text">48권</span>을 한 달 내내</h2>
+      </div>
+
+      <div class="mt-9 mx-auto max-w-[600px]">
+        <!-- 등가 낙차: 종이책 정가(취소선) = 한 권 값(책탑+19,900) -->
+        <div class="bg-white rounded-2xl shadow-soft p-6 md:p-8 reveal hover-lift">
+          <div class="grid items-center gap-4 md:gap-6 md:grid-cols-[1.25fr_auto_1fr]">
+            <!-- 종이책: 교재 더미 + 정가 취소선 -->
+            <div class="text-center">
+              <img src="images/optimized/shim_books_fan.png" alt="심우철 종이책 교재 48권" loading="lazy" decoding="async" class="w-full max-w-[300px] h-auto mx-auto"/>
+              <p class="mt-2 text-[12px] md:text-[13px] font-semibold text-ink-mute">종이책 48권 정가 합산</p>
+              <p class="mt-0.5 text-[26px] md:text-[32px] font-extrabold text-ink-mute/70 line-through decoration-[3px] decoration-ink-mute/40 tabular-nums whitespace-nowrap" role="img" aria-label="종이책 48권 정가 합산 약 71만 원">약 71만 원</p>
+            </div>
+            <!-- 등가 기호 (데스크탑 =, 모바일 ↓) -->
+            <div aria-hidden="true" class="grid place-items-center text-deep/35 font-black">
+              <span class="hidden md:block text-[30px] leading-none">=</span>
+              <span class="md:hidden text-[26px] leading-none">↓</span>
+            </div>
+            <!-- 구독패스: 썸네일 + 가격 -->
+            <div class="bg-sky-soft rounded-xl p-5 text-center">
+              <img src="images/optimized/shim_pass_thumb.webp" alt="심우철 공무원 구독패스" loading="lazy" decoding="async" class="w-full max-w-[140px] h-auto mx-auto rounded-lg shadow-[0_8px_20px_rgba(20,40,80,0.18)]"/>
+              <p class="mt-3 text-[11px] md:text-[12px] font-semibold text-deep-strong/70">구독패스 한 달</p>
+              <p class="mt-0.5 leading-none"><span class="text-[28px] md:text-[38px] font-extrabold text-sky-text tabular-nums">19,900</span><span class="text-[14px] md:text-[16px] font-bold text-sky-text">원</span></p>
+              <span class="mt-2.5 inline-block bg-deep text-white text-[12px] font-bold px-2.5 py-1 rounded-full">약 69만 원 아껴요</span>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-deep-strong rounded-xl px-4 py-3.5 flex items-center justify-center gap-2 leading-snug">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFF200" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span><span class="text-[13px] md:text-[15px] font-bold text-white/85">7월 12일까지 시작하면 </span><span class="text-[16px] md:text-[18px] font-extrabold text-event">첫 달 9,900원</span></span>
+          </div>
+          <p class="mt-3 text-center text-[11px] leading-relaxed text-ink-mute/70">* 전 교재 종이책 정가 합산 기준 (2027 신간은 2026 정가로 추산)</p>
+        </div>
+      </div>
+
+      <a href="https://sconn.io/product/1188054/" class="mt-6 block text-center lnk text-[14px] md:text-[15px]">심우철 공무원 구독패스 자세히 보기 &gt;</a>
+    </div>
+  </section>
+
+  <!-- ================= 투자 3 : 사례2 권규호 + 위험제거 ================= -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[920px] px-6 py-16 md:py-24">
+      <div class="text-center reveal">
+        <span class="inline-block bg-deep text-white text-[12px] font-bold px-3 py-1 rounded-full">사례 2</span>
+        <h2 class="mt-3 text-[20px] md:text-[30px] leading-snug font-extrabold">교재 딱 한 권 값으로,<br/>권규호 전 교재 <span class="text-sky-text">38권</span>을 한 달 내내</h2>
+        <p class="mt-3"><span class="inline-flex items-center gap-1.5 bg-sky-soft text-sky-text text-[12px] md:text-[13px] font-bold px-3 py-1.5 rounded-full"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>서프라이즈 교재 「긴급특강」도 알아서 책장에</span></p>
+      </div>
+
+      <div class="mt-9 mx-auto max-w-[600px]">
+        <!-- 등가 낙차: 종이책 정가(취소선) = 한 권 값(책탑+19,900) -->
+        <div class="bg-sky-faint rounded-2xl p-6 md:p-8 reveal hover-lift">
+          <div class="grid items-center gap-4 md:gap-6 md:grid-cols-[1.25fr_auto_1fr]">
+            <!-- 종이책: 교재 더미 + 정가 취소선 -->
+            <div class="text-center">
+              <img src="images/optimized/kwon_books_fan.png" alt="권규호 종이책 교재 38권" loading="lazy" decoding="async" class="w-full max-w-[300px] h-auto mx-auto"/>
+              <p class="mt-2 text-[12px] md:text-[13px] font-semibold text-ink-mute">종이책 38권 정가 합산</p>
+              <p class="mt-0.5 text-[26px] md:text-[32px] font-extrabold text-ink-mute/70 line-through decoration-[3px] decoration-ink-mute/40 tabular-nums whitespace-nowrap" role="img" aria-label="종이책 38권 정가 합산 약 80만 원">약 80만 원</p>
+            </div>
+            <!-- 등가 기호 (데스크탑 =, 모바일 ↓) -->
+            <div aria-hidden="true" class="grid place-items-center text-deep/35 font-black">
+              <span class="hidden md:block text-[30px] leading-none">=</span>
+              <span class="md:hidden text-[26px] leading-none">↓</span>
+            </div>
+            <!-- 구독패스: 썸네일(+긴급특강 보너스 뱃지) + 가격 -->
+            <div class="bg-white rounded-xl p-5 text-center shadow-soft">
+              <div class="relative w-full max-w-[140px] mx-auto">
+                <img src="images/optimized/kwon_pass_thumb.webp" alt="권규호 공무원 구독패스" loading="lazy" decoding="async" class="w-full h-auto rounded-lg shadow-[0_8px_20px_rgba(20,40,80,0.18)]"/>
+                <span class="absolute -top-2 -right-2 rotate-6 bg-event text-ink text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-md">+긴급특강</span>
+              </div>
+              <p class="mt-3 text-[11px] md:text-[12px] font-semibold text-deep-strong/70">구독패스 한 달</p>
+              <p class="mt-0.5 leading-none"><span class="text-[28px] md:text-[38px] font-extrabold text-sky-text tabular-nums">19,900</span><span class="text-[14px] md:text-[16px] font-bold text-sky-text">원</span></p>
+              <span class="mt-2.5 inline-block bg-deep text-white text-[12px] font-bold px-2.5 py-1 rounded-full">약 78만 원 아껴요</span>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-deep-strong rounded-xl px-4 py-3.5 flex items-center justify-center gap-2 leading-snug">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFF200" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span><span class="text-[13px] md:text-[15px] font-bold text-white/85">7월 12일까지 시작하면 </span><span class="text-[16px] md:text-[18px] font-extrabold text-event">첫 달 9,900원</span></span>
+          </div>
+          <p class="mt-3 text-center text-[11px] leading-relaxed text-ink-mute/70">* 전 교재 종이책 정가 합산 기준 (2027 신간은 2026 정가로 추산)</p>
+        </div>
+      </div>
+
+      <a href="https://sconn.io/product/1188053/" class="mt-6 block text-center lnk text-[14px] md:text-[15px]">권규호 공무원 구독패스 자세히 보기 &gt;</a>
+
+      <!-- 위험 제거 3종 -->
+      <p class="mt-12 text-center text-[13px] md:text-[15px] font-bold text-ink-soft reveal">시작이 부담되지 않도록, 세 가지를 약속해요</p>
+      <div class="mt-5 grid grid-cols-3 gap-2.5 md:gap-4">
+        <!-- 무료체험 -->
+        <div class="group relative overflow-hidden bg-ink text-white rounded-2xl p-4 md:p-6 reveal hover-lift">
+          <div class="absolute -right-5 -bottom-5 w-20 h-20 rounded-full bg-sky/10 transition-transform duration-300 group-hover:scale-150"></div>
+          <span class="relative inline-grid place-items-center w-10 h-10 md:w-12 md:h-12 rounded-xl bg-sky/15 text-sky">
+            <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 8.5 L16 12 L10 15.5 Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="relative mt-3 text-[13px] md:text-[16px] font-extrabold leading-snug">일주일 무료</div>
+          <div class="relative mt-1 text-[11px] md:text-[13px] text-white/70 leading-snug">먼저 써보고<br/>결정하세요</div>
+        </div>
+        <!-- 필요할 때만 -->
+        <div class="group relative overflow-hidden bg-ink text-white rounded-2xl p-4 md:p-6 reveal hover-lift">
+          <div class="absolute -right-5 -bottom-5 w-20 h-20 rounded-full bg-sky/10 transition-transform duration-300 group-hover:scale-150"></div>
+          <span class="relative inline-grid place-items-center w-10 h-10 md:w-12 md:h-12 rounded-xl bg-sky/15 text-sky">
+            <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2.5" y="7" width="19" height="10" rx="5" stroke="currentColor" stroke-width="2"/>
+              <circle cx="16.5" cy="12" r="3" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="relative mt-3 text-[13px] md:text-[16px] font-extrabold leading-snug">필요할 때만</div>
+          <div class="relative mt-1 text-[11px] md:text-[13px] text-white/70 leading-snug">공부할 달에만<br/>구독해요</div>
+        </div>
+        <!-- 쉽게 해지 -->
+        <div class="group relative overflow-hidden bg-ink text-white rounded-2xl p-4 md:p-6 reveal hover-lift">
+          <div class="absolute -right-5 -bottom-5 w-20 h-20 rounded-full bg-sky/10 transition-transform duration-300 group-hover:scale-150"></div>
+          <span class="relative inline-grid place-items-center w-10 h-10 md:w-12 md:h-12 rounded-xl bg-sky/15 text-sky">
+            <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 4 H6 a2 2 0 0 0 -2 2 v12 a2 2 0 0 0 2 2 h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 12 H21 M18 9 L21 12 L18 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="relative mt-3 text-[13px] md:text-[16px] font-extrabold leading-snug">쉽게 해지</div>
+          <div class="relative mt-1 text-[11px] md:text-[13px] text-white/70 leading-snug">원할 때<br/>버튼 한 번이면 끝</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 상품 선택 + CTA ================= -->
+  <section id="select" class="bg-ink text-white scroll-mt-20">
+    <div class="mx-auto max-w-[720px] px-6 py-16 md:py-24 text-center">
+      <span class="inline-block bg-event text-ink text-[13px] font-extrabold px-3 py-1 rounded reveal">EVENT</span>
+      <h2 class="mt-4 text-[24px] md:text-[36px] leading-snug font-extrabold reveal">더 빨리 합격을 향해!<br/>7월 12일까지 시작하면, <span class="text-event">첫 달 할인</span></h2>
+      <p class="mt-6 text-[14px] md:text-[16px] text-white/70 reveal">이벤트 기간 내 무료체험을 시작하면</p>
+      <p class="mt-1 text-[18px] md:text-[22px] reveal">첫 달 구독료 <span class="line-through text-white/55">19,900원</span> <span class="text-event text-[30px] md:text-[42px] font-extrabold align-middle">9,900원</span></p>
+
+      <!-- countdown -->
+      <div class="mt-6 inline-flex gap-2 font-mono tabular-nums reveal">
+        <div class="bg-white/10 rounded-lg px-3.5 py-2.5"><span id="cd-d" class="text-[22px] md:text-[26px] font-extrabold">00</span><div class="text-[10px] text-white/50">일</div></div>
+        <div class="bg-white/10 rounded-lg px-3.5 py-2.5"><span id="cd-h" class="text-[22px] md:text-[26px] font-extrabold">00</span><div class="text-[10px] text-white/50">시</div></div>
+        <div class="bg-white/10 rounded-lg px-3.5 py-2.5"><span id="cd-m" class="text-[22px] md:text-[26px] font-extrabold">00</span><div class="text-[10px] text-white/50">분</div></div>
+        <div class="bg-white/10 rounded-lg px-3.5 py-2.5"><span id="cd-s" class="text-[22px] md:text-[26px] font-extrabold">00</span><div class="text-[10px] text-white/50">초</div></div>
+      </div>
+
+      <!-- 상품 선택 -->
+      <p class="mt-10 mb-3 text-left text-[14px] md:text-[15px] font-semibold text-white/70">상품 선택</p>
+      <div class="grid grid-cols-2 gap-3 md:gap-4" id="productSelect" role="radiogroup" aria-label="구독패스 상품 선택">
+        <label class="prod-card cursor-pointer text-left rounded-2xl border-2 border-sky bg-white/[0.06] p-4 md:p-5 transition focus-within:ring-2 focus-within:ring-sky focus-within:ring-offset-2 focus-within:ring-offset-ink" data-url="https://sconn.io/product/1188054/">
+          <input type="radio" name="prod" class="sr-only" value="shim" aria-label="영어 심우철 공무원 구독패스, 첫 달 9,900원" checked />
+          <div class="flex items-center justify-between">
+            <span class="bg-sky text-ink text-[11px] font-extrabold px-2 py-0.5 rounded-full">영어</span>
+            <span class="radio-dot w-4 h-4 rounded-full border-2 border-sky grid place-items-center"><span class="w-2 h-2 rounded-full bg-sky"></span></span>
+          </div>
+          <div class="mt-2 text-[15px] md:text-[17px] font-bold leading-snug">심우철<br/>공무원 구독패스</div>
+          <div class="mt-2 text-[12px] md:text-[13px] text-white/60 leading-snug">26~27 시즌(2개년)<br/>교재 48권</div>
+          <div class="mt-3 text-[12px] md:text-[13px] text-white/55 line-through">월 19,900원</div>
+          <div class="text-[15px] md:text-[17px] font-extrabold text-event">첫 달 9,900원</div>
+        </label>
+        <label class="prod-card cursor-pointer text-left rounded-2xl border-2 border-white/15 bg-white/[0.03] p-4 md:p-5 transition focus-within:ring-2 focus-within:ring-sky focus-within:ring-offset-2 focus-within:ring-offset-ink" data-url="https://sconn.io/product/1188053/">
+          <input type="radio" name="prod" class="sr-only" value="kwon" aria-label="국어 권규호 공무원 구독패스, 첫 달 9,900원" />
+          <div class="flex items-center justify-between">
+            <span class="bg-sky text-ink text-[11px] font-extrabold px-2 py-0.5 rounded-full">국어</span>
+            <span class="radio-dot w-4 h-4 rounded-full border-2 border-white/30 grid place-items-center"><span class="w-2 h-2 rounded-full bg-transparent"></span></span>
+          </div>
+          <div class="mt-2 text-[15px] md:text-[17px] font-bold leading-snug">권규호<br/>공무원 구독패스</div>
+          <div class="mt-2 text-[12px] md:text-[13px] text-white/60 leading-snug">24~27 시즌(4개년)<br/>교재 38권</div>
+          <div class="mt-3 text-[12px] md:text-[13px] text-white/55 line-through">월 19,900원</div>
+          <div class="text-[15px] md:text-[17px] font-extrabold text-event">첫 달 9,900원</div>
+        </label>
+      </div>
+
+      <a id="mainCta" href="https://sconn.io/product/1188054/" class="mt-6 block w-full bg-event text-ink text-[17px] md:text-[19px] font-extrabold rounded-2xl py-4 hover:brightness-95 active:scale-[0.99] transition cta-pulse">일주일 무료로 시작하기 →</a>
+      <p class="mt-3 text-[12px] md:text-[13px] text-white/55">일주일 무료체험 후 첫 달 9,900원, 이후 매달 19,900원 자동 결제</p>
+    </div>
+  </section>
+
+  <!-- ================= 교재 리스트 (실제 교재 표지 — 디자이너 Figma 에셋) ================= -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[1080px] px-6 py-16 md:py-24">
+      <h2 class="text-center text-[22px] md:text-[36px] font-extrabold leading-snug reveal">구독패스에 담긴<br class="md:hidden"/> 교재를 미리 만나보세요</h2>
+      <p class="mt-2 text-center text-[13px] md:text-[15px] text-ink-mute reveal">심우철 48권, 권규호 38권 (신간 자동 업데이트)</p>
+      <div class="mt-9 grid grid-cols-4 md:grid-cols-8 gap-2.5 md:gap-3 reveal">
+        <img src="images/optimized/books/book01.webp" alt="심우철 심슨 SYNTAX 300 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book02.webp" alt="심우철 심슨 GRAMMAR 300 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book03.webp" alt="심우철 실전동형 모의고사 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book04.webp" alt="심우철 하프 모의고사 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book05.webp" alt="심우철 빈칸추론 연결고리 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book06.webp" alt="심우철 심슨영어 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book07.webp" alt="심우철 심슨영어 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book08.webp" alt="심우철 심슨영어 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book09.webp" alt="권규호 신유형 국어의 정석 모의고사 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book10.webp" alt="권규호 신유형 빈칸 모의고사 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book11.webp" alt="권규호 시나리오 공무원 모의고사 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book12.webp" alt="권규호 독해 논리 강훈련 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book13.webp" alt="권규호 긴급특강 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book14.webp" alt="권규호 신유형 국어의 정석 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book15.webp" alt="권규호 개기문 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+        <img src="images/optimized/books/book16.webp" alt="권규호 개기문 교재 표지" loading="lazy" decoding="async" class="bookcover"/>
+      </div>
+      <p class="mt-5 text-center text-[12px] text-ink-mute/70 reveal">* 구독패스에 담긴 실제 교재 일부예요. 신간이 나오면 책장에 자동으로 더해져요.</p>
+    </div>
+  </section>
+
+  <!-- ================= 슬로건 ================= -->
+  <section class="bg-ink text-white relative overflow-hidden">
+    <div class="blob" style="width:300px;height:300px;left:50%;top:-60px;transform:translateX(-50%);background:#43BCF8;opacity:.25;"></div>
+    <div class="relative mx-auto max-w-[900px] px-6 py-20 md:py-28 text-center">
+      <div class="flex justify-center mb-6 reveal"><img src="images/sconn_white.png" alt="SCONN" class="h-8 md:h-10 w-auto opacity-90" /></div>
+      <p class="text-[22px] md:text-[36px] leading-snug font-extrabold tracking-[-0.01em] reveal">흐름이 끊기지 않는 공부,<br/>합격까지 스콘이 함께합니다</p>
+      <div class="mt-8 reveal"><a href="#select" class="inline-block w-full md:w-auto md:px-12 bg-event text-ink text-[16px] md:text-[18px] font-extrabold rounded-2xl py-4 hover:brightness-95 active:scale-[0.99] transition">일주일 무료로 시작하기 →</a></div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[760px] px-6 py-16 md:py-24">
+      <h2 class="text-center text-[24px] md:text-[38px] font-extrabold reveal">자주 묻는 질문</h2>
+
+      <p class="mt-10 mb-3 text-[13px] md:text-[14px] font-bold text-deep-strong reveal">구독패스의 내용과 혜택이 궁금해요</p>
+      <div class="space-y-2.5">
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">어떤 교재를 볼 수 있나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">내가 고른 선생님의 시즌 교재를 전부 무제한으로 볼 수 있어요. 지난 시즌 교재까지 포함되고, 신간은 출간되는 대로 자동으로 추가돼요.</p>
+          <div class="mt-4">
+            <p class="text-[13px] md:text-[14px] font-bold text-deep-strong">심우철 영어 (2026~2027 시즌)</p>
+            <table class="mt-1.5 w-full text-left text-[12.5px] md:text-[13.5px]">
+              <tbody class="align-top">
+                <tr class="border-b border-ink/10"><th class="py-2 pr-3 font-bold text-deep-strong align-top whitespace-nowrap">2026</th><td class="py-2 text-ink-soft leading-relaxed">심슨 보카, 심슨 문법/구문/독해, 전략서+암기노트, 심슨 300제(문법/구문/독해), 문법/독해 풀이 전략서, 이것만은 알고가자, 하프 모의고사(시즌 1~5), 실전 동형 모의고사(시즌 1~4)</td></tr>
+                <tr><th class="py-2 pr-3 font-bold text-deep-strong align-top whitespace-nowrap">2027</th><td class="py-2 text-ink-soft leading-relaxed">영기싹(영어 기초), 심슨 보카/구문/문법/독해, 300제(문법/구문/독해), 문법/독해 풀이 전략서, 어휘 생활영어 200제, 이것만은 알고가자, 하프 모의고사(시즌 1~5), 동형 모의고사(시즌 1~4)</td></tr>
+              </tbody>
+            </table>
+            <p class="mt-4 text-[13px] md:text-[14px] font-bold text-deep-strong">권규호 국어 (2024~2027 시즌)</p>
+            <table class="mt-1.5 w-full text-left text-[12.5px] md:text-[13.5px]">
+              <tbody class="align-top">
+                <tr class="border-b border-ink/10"><th class="py-2 pr-3 font-bold text-deep-strong align-top whitespace-nowrap">2024</th><td class="py-2 text-ink-soft leading-relaxed">암기왕(문법/문학/한자), 독해왕, 개기문(문법/독해/문학), 독해강훈련, 압축이론정리, 수능형 모의고사 1, 2</td></tr>
+                <tr class="border-b border-ink/10"><th class="py-2 pr-3 font-bold text-deep-strong align-top whitespace-nowrap">2025</th><td class="py-2 text-ink-soft leading-relaxed">신유형 국어의 정석(+논리편), 개기문(문법/독해/논리), 독해 논리 강훈련, 초단기 공무원 국어, 신유형 모의고사 1, 2, 신유형 봉투 모의고사, 논리 압축 파이널</td></tr>
+                <tr class="border-b border-ink/10"><th class="py-2 pr-3 font-bold text-deep-strong align-top whitespace-nowrap">2026</th><td class="py-2 text-ink-soft leading-relaxed">신유형 국어의 정석, 개기문(문법/독해/논리), 독해 논리 강훈련, 시나리오 모의고사 1, 2, 파이널 최소 문법/어휘/공문서, 긴급특강</td></tr>
+                <tr><th class="py-2 pr-3 font-bold text-deep-strong align-top whitespace-nowrap">2027</th><td class="py-2 text-ink-soft leading-relaxed">신유형 국어의 정석, 개기문(문법/논리/독해), 독해 논리 강훈련, 시나리오 모의고사 1, 2</td></tr>
+              </tbody>
+            </table>
+            <p class="mt-3 text-[11px] md:text-[12px] text-ink-mute/70">* 일부 신간은 출간 일정에 따라 순차적으로 추가돼요.</p>
+          </div>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">무료체험 버전에는 어떤 차이가 있나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">무료체험 기간에도 구독패스에 포함된 모든 교재를 볼 수 있고, 스콘의 모든 기능을 똑같이 이용할 수 있어요. 결제 전에 나에게 맞는 상품인지 가볍게 확인해 보세요.</p>
+        </details>
+      </div>
+
+      <p class="mt-8 mb-3 text-[13px] md:text-[14px] font-bold text-deep-strong reveal">구독료와 결제/해지, 구독 기간이 궁금해요</p>
+      <div class="space-y-2.5">
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">무료체험 중에 해지하면 요금이 청구되나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">일주일 무료체험 기간 안에 해지하면 한 푼도 청구되지 않아요. 체험이 끝나는 시점에 첫 결제가 진행돼요. (얼리버드 기간에 시작하면 첫 달 9,900원, 이후 매달 19,900원) 자동 결제 전에 이메일로 미리 안내해 드려요.</p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">결제는 어떻게 하나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">공무원 구독패스는 매달 19,900원이 자동 결제되는 월 정기결제 상품이에요. 카드 등록 또는 카카오페이로 결제할 수 있어요. 결제가 실패하면 최대 3회까지 다시 시도하고, 그래도 결제되지 않으면 구독이 해지되니 주의해 주세요. 결제 수단은 스콘 홈페이지(웹*)의 [마이페이지]에서 변경할 수 있어요.<br/><span class="text-ink-mute text-[13px]">* 스콘 앱이 아닌 크롬, 사파리 등의 브라우저에서 접속해 주세요.</span></p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">할인 적용은 어떻게 하나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">구독패스는 카드 등록 후 매달 자동으로 결제되는 상품이라, 스콘 할인 쿠폰이나 포인트는 사용하실 수 없어요.</p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">해지는 어떻게 하나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">더 이상 구독을 원하지 않으면 언제든 쉽게 해지할 수 있어요. 스콘 홈페이지(웹*) [마이페이지] → [내 서재] → 해당 구독 상품 [구독 정보 조회 &gt;] → 화면 맨 아래 [구독 취소]. 구독을 재개하려면 같은 경로에서 [구독 이어하기]를 눌러 주세요.<br/><span class="text-ink-mute text-[13px]">* 스콘 앱이 아닌 크롬, 사파리 등의 브라우저에서 접속해 주세요.</span></p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">구독을 취소해도 교재를 볼 수 있나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">해지하셔도 남은 구독 기간 동안 교재를 볼 수 있어요. 다만 구독 기간이 만료되면 교재는 비활성 상태가 되어 열람할 수 없어요.</p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">그럼 구독 해지 시 필기도 사라지나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">아니요, 비활성 상태가 될 뿐 공부한 기록은 그대로 남아요. 구독을 다시 시작하면 이전 필기 그대로 이어서 공부할 수 있어요. 단, ‘레퍼런스 링크’ 기능은 사용할 수 없고, 교재나 앱을 삭제하면 모든 기록이 사라지니 해지하셔도 교재는 지우지 마세요!</p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">이미 구매한 교재는 어떻게 되나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">이미 구매한 교재는 구독패스와 별개의 상품이에요. ‘소장’으로 구매한 교재는 기간 제한 없이 계속 볼 수 있고, ‘대여’로 구매한 교재는 남은 대여 기간만큼 볼 수 있어요.</p>
+        </details>
+      </div>
+
+      <p class="mt-8 mb-3 text-[13px] md:text-[14px] font-bold text-deep-strong reveal">교재 열람과 스콘 서비스가 궁금해요</p>
+      <div class="space-y-2.5">
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">교재는 어떻게 열람할 수 있나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">태블릿에 스콘(SCONN) 앱을 설치한 뒤 공부하실 수 있어요. <a href="https://product.sconn.io/downloadbook" class="lnk">☞ 공부 시작 가이드 보기</a></p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">신간 교재는 어떻게 받을 수 있나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">구독패스 구성 교재는 출간 즉시 [구매목록]에 자동으로 들어와요. 필요한 교재만 다운받아 편하게 공부하세요! <a href="https://product.sconn.io/downloadbook" class="lnk">☞ 교재 다운로드 방법 보기</a></p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">와이파이/데이터 연결 없이 사용할 수 있나요?</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">다운로드 후 [내 서재]에 들어온 교재는 인터넷이 없어도 사용할 수 있어요. 단, 교재 다운로드와 구매, 공부 기록 확인, 동기화에는 인터넷 연결이 필요해요.</p>
+        </details>
+        <details class="bg-sky-faint rounded-xl px-5 py-4 reveal">
+          <summary class="flex items-center justify-between gap-3"><span class="text-[15px] md:text-[16px] font-semibold">지난 시즌 패스를 구독 중인데, 신규 상품으로 전환하고 싶어요.</span><span class="faq-chevron text-ink-mute">⌄</span></summary>
+          <p class="mt-3 text-[14px] md:text-[15px] leading-relaxed text-ink-soft">지난 시즌(2026 대비) 구독패스를 해지하고 새로운(2027 대비) 구독패스를 시작하시려면, 아래 링크의 안내 사항을 꼼꼼히 읽어 주세요. <a href="https://product.sconn.io/subscribe2_guide" class="lnk">☞ 유의사항 자세히 보기</a></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer ================= -->
+  <footer class="bg-[#0A0E10] text-white/60">
+    <div class="mx-auto max-w-[1080px] px-6 py-12">
+      <img src="images/sconn_white.png" alt="SCONN" class="h-6 w-auto opacity-80" />
+      <p class="mt-4 text-[12px] md:text-[13px] leading-relaxed">공부의 흐름이 끊기지 않게, 스콘(SCONN)</p>
+      <div class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-[12px] md:text-[13px]">
+        <a href="https://sconn.io" class="hover:text-white underline underline-offset-2">스콘 홈</a>
+        <a href="https://product.sconn.io/subscribe2_guide" class="hover:text-white underline underline-offset-2">구독 전환 안내</a>
+        <a href="#select" class="hover:text-white underline underline-offset-2">구독 시작하기</a>
+      </div>
+      <p class="mt-6 text-[11px] leading-relaxed text-white/35">상호명 (주)플렉슬. 본 페이지의 가격, 혜택, 교재 구성은 운영 정책에 따라 변경될 수 있습니다.<br/>© SCONN. All rights reserved.</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ============ 모바일 하단 고정 CTA ============ -->
+<a href="#select" id="stickyCta" class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-event text-ink text-[16px] font-extrabold text-center py-4 shadow-[0_-6px_20px_rgba(0,0,0,0.18)] translate-y-full transition-transform duration-300">
+  일주일 무료로 시작하기 →
+</a>
+
+<style>
+  .rev-card { flex:0 0 auto; width:270px; background:#fff; border-radius:16px; padding:20px; box-shadow:0 4px 16px rgba(0,0,0,.06); color:#43BCF8; font-family:Georgia,serif; font-size:26px; line-height:1; }
+  .rev-card .rev-t { display:block; margin-top:6px; color:#393939; font-family:Pretendard,sans-serif; font-size:14px; line-height:1.55; }
+  .rev-card .rev-by { margin-top:12px; color:#9aa3ad; font-family:Pretendard,sans-serif; font-size:12px; font-weight:600; }
+</style>
+
+<script>
+  /* ===== 카운트다운 (얼리버드 종료: 2026-07-13 00:00 KST) ===== */
+  const DEADLINE = new Date('2026-07-13T00:00:00+09:00').getTime();
+  const pad = n => String(n).padStart(2,'0');
+  function tick(){
+    let diff = Math.max(0, DEADLINE - Date.now());
+    const d = Math.floor(diff/86400000); diff -= d*86400000;
+    const h = Math.floor(diff/3600000);  diff -= h*3600000;
+    const m = Math.floor(diff/60000);    diff -= m*60000;
+    const s = Math.floor(diff/1000);
+    const set = (id,v)=>{ const el=document.getElementById(id); if(el) el.textContent=pad(v); };
+    set('fb-d',d); set('fb-h',h); set('fb-m',m); set('fb-s',s);
+    set('cd-d',d); set('cd-h',h); set('cd-m',m); set('cd-s',s);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ===== 상품 선택 → CTA 링크 동기화 (클릭 + 키보드 change) ===== */
+  (function(){
+    const cards = document.querySelectorAll('#productSelect .prod-card');
+    const cta = document.getElementById('mainCta');
+    function select(card){
+      cards.forEach(c=>{
+        const on = c===card;
+        c.classList.toggle('border-sky', on);
+        c.classList.toggle('bg-white/[0.06]', on);
+        c.classList.toggle('border-white/15', !on);
+        c.classList.toggle('bg-white/[0.03]', !on);
+        const dot = c.querySelector('.radio-dot');
+        const inner = dot.querySelector('span');
+        dot.classList.toggle('border-sky', on);
+        dot.classList.toggle('border-white/30', !on);
+        inner.classList.toggle('bg-sky', on);
+        inner.classList.toggle('bg-transparent', !on);
+        c.querySelector('input').checked = on;
+      });
+      cta.setAttribute('href', card.dataset.url);
+    }
+    cards.forEach(c=>{
+      const radio = c.querySelector('input');
+      c.addEventListener('click', ()=>select(c));
+      radio.addEventListener('change', ()=>select(c));
+    });
+  })();
+
+  /* ===== reveal on scroll + count-up ===== */
+  (function(){
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function countUp(el){
+      const target=parseFloat(el.dataset.count), dec=parseInt(el.dataset.dec||'0'), suf=el.dataset.suffix||'';
+      if(reduce){ el.textContent=target.toFixed(dec)+suf; return; }
+      const dur=1100; let start=null;
+      function step(ts){ if(!start)start=ts; const p=Math.min(1,(ts-start)/dur); const v=target*(1-Math.pow(1-p,3)); el.textContent=v.toFixed(dec)+suf; if(p<1)requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    }
+    const io = new IntersectionObserver((ents)=>{
+      ents.forEach(e=>{
+        if(!e.isIntersecting) return;
+        e.target.classList.add('in');
+        if(e.target.dataset.count!==undefined) countUp(e.target);
+        io.unobserve(e.target);
+      });
+    }, { threshold:0.15, rootMargin:'0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal,[data-count]').forEach(el=>io.observe(el));
+  })();
+
+  /* ===== 모바일 하단 고정 CTA: 히어로 지나면 표시, 가격 섹션에선 숨김 ===== */
+  (function(){
+    const sticky=document.getElementById('stickyCta');
+    const hero=document.getElementById('hero');
+    const sel=document.getElementById('select');
+    if(!sticky||!hero||!sel) return;
+    let pastHero=false, atSelect=false;
+    const upd=()=>{ sticky.style.transform=(pastHero&&!atSelect)?'translateY(0)':'translateY(100%)'; };
+    new IntersectionObserver(([e])=>{ pastHero=!e.isIntersecting; upd(); },{threshold:0}).observe(hero);
+    new IntersectionObserver(([e])=>{ atSelect=e.isIntersecting; upd(); },{threshold:0.15}).observe(sel);
+  })();
+
+  /* ===== 스크롤 패럴럭스 (목업 등 [data-parallax]) ===== */
+  (function(){
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els=[...document.querySelectorAll('[data-parallax]')];
+    if(!els.length) return;
+    let ticking=false;
+    function update(){
+      const vh=innerHeight||document.documentElement.clientHeight;
+      els.forEach(el=>{
+        const r=el.getBoundingClientRect();
+        if(r.bottom<-100||r.top>vh+100) return;
+        const prog=((r.top+r.height/2)-vh/2)/vh;
+        const f=parseFloat(el.dataset.parallax)||0;
+        el.style.transform='translateY('+(prog*f*-120).toFixed(1)+'px)';
+      });
+      ticking=false;
+    }
+    addEventListener('scroll',()=>{ if(!ticking){ requestAnimationFrame(update); ticking=true; } },{passive:true});
+    addEventListener('resize',update,{passive:true});
+    update();
+  })();
+</script>
+</body>
+</html>

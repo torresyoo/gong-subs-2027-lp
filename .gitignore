@@ -1,0 +1,18 @@
+# 작업 파일 (발행 제외)
+.DS_Store
+_preview/
+_figma_ref/
+.agents/
+
+# 백업본
+index.v1.backup.html
+index.v2.backup.html
+index.v2b.prewf.backup.html
+
+# 이미지 원본 백업
+images/optimized/*.orig.png
+images/optimized/*.prev.png
+images/optimized/*.prev.webp
+
+# 내부 문서 (공개 저장소 제외 — Figma 파일 키·시트 ID 포함)
+FIGMA_HANDOFF.md
